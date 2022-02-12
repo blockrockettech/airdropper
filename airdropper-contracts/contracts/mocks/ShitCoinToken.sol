@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 contract ShitCoinToken is ERC20, ERC20Detailed {
 
     constructor (address initialAccount, uint256 initialBalance)
-    ERC20Detailed("ShitCoin", "SHITERS", 18)
+    ERC20Detailed("HEY", "HEY", 18)
     public {
         _mint(initialAccount, initialBalance);
     }

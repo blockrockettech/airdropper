@@ -12,11 +12,11 @@ module.exports = async function (deployer, network, accounts) {
 
     const creator = getAccountAddress(accounts, 0, network, MNEMONIC, INFURA_KEY);
 
-    const platform = '0x8845E1532DB5f6702aa0A8C737A5dC61abBd78e7';
-    const platformSplit = '90';
+    const platform = '0x818Ff73A5d881C27A945bE944973156C01141232';
+    const platformSplit = '50';
 
-    const partner = '0x818Ff73A5d881C27A945bE944973156C01141232';
-    const partnerSplit = '10';
+    const partner = '0x8e8b5122b7a4E2A060D4d4434CdA2Af5DEcC651a';
+    const partnerSplit = '50';
 
     await deployer.deploy(AccessWhitelist, {from: creator});
     const accessWhitelist = await AccessWhitelist.deployed();
