@@ -1,5 +1,8 @@
-type AirdropUser @entity {
+type TransferTokens @entity {
   id: ID!
-  credits: BigInt!
-  _address: Bytes! # address
+  token: Bytes! # address
+  sender: Bytes! # address
+  addressCount: BigInt!
+  tokensSent: BigInt!
 }
+
