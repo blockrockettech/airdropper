@@ -1,7 +1,7 @@
 
 // File: @openzeppelin/contracts/token/ERC20/IERC20.sol
 
-pragma solidity ^0.5.12;
+pragma solidity ^0.5.0;
 
 /**
  * @dev Interface of the ERC20 standard as defined in the EIP. Does not include
@@ -80,7 +80,7 @@ interface IERC20 {
 
 // File: @openzeppelin/contracts/math/SafeMath.sol
 
-//pragma solidity ^0.5.0;
+pragma solidity ^0.5.0;
 
 /**
  * @dev Wrappers over Solidity's arithmetic operations with added overflow
@@ -239,7 +239,7 @@ library SafeMath {
 
 // File: @openzeppelin/contracts/GSN/Context.sol
 
-//pragma solidity ^0.5.0;
+pragma solidity ^0.5.0;
 
 /*
  * @dev Provides information about the current execution context, including the
@@ -269,7 +269,7 @@ contract Context {
 
 // File: @openzeppelin/contracts/access/Roles.sol
 
-//pragma solidity ^0.5.0;
+pragma solidity ^0.5.0;
 
 /**
  * @title Roles
@@ -308,7 +308,7 @@ library Roles {
 
 // File: @openzeppelin/contracts/access/roles/WhitelistAdminRole.sol
 
-//pragma solidity ^0.5.0;
+pragma solidity ^0.5.0;
 
 
 
@@ -358,7 +358,7 @@ contract WhitelistAdminRole is Context {
 
 // File: @openzeppelin/contracts/access/roles/WhitelistedRole.sol
 
-//pragma solidity ^0.5.0;
+pragma solidity ^0.5.0;
 
 
 
@@ -411,7 +411,7 @@ contract WhitelistedRole is Context, WhitelistAdminRole {
 
 // File: contracts/AccessWhitelist.sol
 
-//pragma solidity ^0.5.12;
+pragma solidity ^0.5.12;
 
 
 contract AccessWhitelist is WhitelistedRole {
@@ -422,7 +422,7 @@ contract AccessWhitelist is WhitelistedRole {
 
 // File: contracts/AccessControls.sol
 
-//pragma solidity ^0.5.12;
+pragma solidity ^0.5.12;
 
 
 contract AccessControls {
@@ -449,7 +449,7 @@ contract AccessControls {
 
 // File: contracts/CommissionSplitter.sol
 
-//pragma solidity ^0.5.12;
+pragma solidity ^0.5.12;
 
 
 
@@ -500,7 +500,7 @@ contract CommissionSplitter is AccessControls {
 
 // File: contracts/ERC20Airdropper.sol
 
-//pragma solidity ^0.5.5;
+pragma solidity ^0.5.5;
 
 
 

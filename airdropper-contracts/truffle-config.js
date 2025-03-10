@@ -74,6 +74,61 @@ module.exports = {
             timeoutBlocks: 200,   // # of blocks before a deployment times out  (minimum/default: 50)
             skipDryRun: true      // Skip dry run before migrations? (default: false for public nets )
         },
+        base_sepolia: {
+            provider: function () {
+                return new HDWalletProvider(MNEMONIC, 'https://sepolia.base.org');
+            },
+            network_id: 84532, // Base Sepolia network ID
+            gas: 8000000,
+            gasPrice: 1200000000, // 1.2 gwei
+            confirmations: 2,
+            timeoutBlocks: 200,
+            skipDryRun: true
+        },
+        base: {
+            provider: function () {
+                return new HDWalletProvider(MNEMONIC, 'https://mainnet.base.org');
+            },
+            network_id: 8453,  // Base Mainnet Network ID
+            gas: 8000000,
+            gasPrice: 120000000, // 1.2 gwei
+            confirmations: 2,  // Number of confirmations before considering a transaction as mined
+            timeoutBlocks: 200,  // Wait time for blocks before a transaction is marked as failed
+            skipDryRun: true  // Skips dry run for deployment
+        },
+        arbitrum: {
+            provider: function () {
+                return new HDWalletProvider(MNEMONIC, 'https://arb1.arbitrum.io/rpc');
+            },
+            network_id: 42161,
+            gas: 8000000,
+            gasPrice: 120000000, // 1.2 gwei
+            confirmations: 2,  // Number of confirmations before considering a transaction as mined
+            timeoutBlocks: 200,  // Wait time for blocks before a transaction is marked as failed
+            skipDryRun: true  // Skips dry run for deployment
+        },
+        optimism: {
+            provider: function () {
+                return new HDWalletProvider(MNEMONIC, `https://optimism-mainnet.infura.io/v3/${INFURA_KEY}`);
+            },
+            network_id: 10, // Optimism Mainnet network ID
+            gas: 8000000,
+            gasPrice: 120000000, // 1.2 gwei
+            confirmations: 2,  // Number of confirmations before considering a transaction as mined
+            timeoutBlocks: 200,  // Wait time for blocks before a transaction is marked as failed
+            skipDryRun: true  // Skips dry run for deployment
+        },
+        optimism_sepolia: {
+            provider: function () {
+                return new HDWalletProvider(MNEMONIC, 'https://sepolia.optimism.io');
+            },
+            network_id: 11155420, // Optimism Sepolia network ID
+            gas: 8000000,
+            gasPrice: 120000000, // 1.2 gwei
+            confirmations: 2,  // Number of confirmations before considering a transaction as mined
+            timeoutBlocks: 200,  // Wait time for blocks before a transaction is marked as failed
+            skipDryRun: true  // Skips dry run for deployment
+        },
     },
     plugins: [
         'truffle-plugin-verify'
