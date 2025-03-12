@@ -120,11 +120,18 @@ module.exports = {
         },
         optimism_sepolia: {
             provider: function () {
-                return new HDWalletProvider(MNEMONIC, 'https://sepolia.optimism.io');
+                return new HDWalletProvider({
+                    mnemonic: {
+                        phrase: MNEMONIC
+                    },
+                    providerOrUrl: 'https://sepolia.optimism.io',
+                    chainId: 11155420,
+                    shareNonce: true,
+                });
             },
             network_id: 11155420, // Optimism Sepolia network ID
             gas: 8000000,
-            gasPrice: 120000000, // 1.2 gwei
+            gasPrice: 12000000, // 1.2 gwei
             confirmations: 2,  // Number of confirmations before considering a transaction as mined
             timeoutBlocks: 200,  // Wait time for blocks before a transaction is marked as failed
             skipDryRun: true  // Skips dry run for deployment
